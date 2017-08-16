@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0",
+    "babel-preset-power-assert"
+  ],
+  "plugins": [
+    "transform-export-extensions",
+    "babel-plugin-espower"
+  ]
+}

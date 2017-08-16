@@ -1,0 +1,10 @@
+{
+  "extends": "udacity",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "object-curly-spacing": "off"
+  }
+}
