@@ -50,6 +50,9 @@
   * [ ] apis should be async 
 * error handling 
   * [ ] api errors should not affect ui: http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/
+  * [ ] should handle third party library initialization error 
+  * [ ] should handle network issue 
+  * [ ] should handle firewall issue
   * [ ] application should run without error
 * code quality
   * [ ] knockout should be mv*-patternly used
@@ -69,6 +72,6 @@
   * [ ] what third-party apis are used
   * [ ] project efforts 
 
---- 
-
+---
+ 
 [rubric]: https://review.udacity.com/#!/rubrics/17/view
