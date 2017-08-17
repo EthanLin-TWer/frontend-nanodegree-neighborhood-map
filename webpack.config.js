@@ -8,6 +8,8 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 });
 
+const UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin();
+
 module.exports = {
   entry: './src/index.js',
   module: {
@@ -16,7 +18,8 @@ module.exports = {
     ]
   },
   plugins: [
-    HTMLWebpackPluginConfig
+    HTMLWebpackPluginConfig,
+    UglifyJsPluginConfig
   ],
   output: {
     path: `${__dirname}/dist`,
