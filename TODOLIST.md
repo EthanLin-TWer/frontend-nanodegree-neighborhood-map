@@ -30,9 +30,11 @@
   * `npm install --save-dev mocha power-assert sinon`
   * [x] set power assert
   * [x] set up mocha and first test case 
+* [ ] coverage: istabul
+* [ ] less support
 * [ ] project structure 
 * [ ] build performance in 
-  
+
 
 ## submit requirements 
 
