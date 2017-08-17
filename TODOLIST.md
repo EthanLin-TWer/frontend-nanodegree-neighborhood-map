@@ -20,7 +20,7 @@
   * `npm install --save-dev eslint eslint-config-udacity eslint-plugin-import`
   * `echo '{ "extends": "udacity" }' > .eslintrc.json`
   * `"lint": "eslint src test"`
-* [ ] webpack
+* [x] webpack
   * `npm install --save-dev webpack webpack-dev-server`
   * setup webpack to work
 * [x] API: axios
@@ -30,6 +30,9 @@
   * `npm install --save-dev mocha power-assert sinon`
   * [x] set power assert
   * [x] set up mocha and first test case 
+* [ ] project structure 
+* [ ] build performance in 
+  
 
 ## submit requirements 
 
@@ -63,7 +66,7 @@
   * [ ] more api sources 
   * [ ] performance optimization
   * [ ] everything that you will acquire from a paid product - ui, experience, simple, shortcuts...
-* [ ] performance
+* [ ] performance - build-performance-in
   * [ ] 90+ in PageSpeed
   * [ ] 60fps 
 * [ ] styling check - eslint-config-udacity - build-quality-in
