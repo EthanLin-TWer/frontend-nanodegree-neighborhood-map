@@ -1,4 +1,5 @@
 import ko from 'knockout';
+import './index.styl';
 
 class Index {
   constructor() {

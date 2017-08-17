@@ -30,8 +30,9 @@
   * `npm install --save-dev mocha power-assert sinon`
   * [x] set power assert
   * [x] set up mocha and first test case 
+* [x] styles support - stylus 
+  * https://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320
 * [ ] coverage: istabul
-* [ ] less support
 * [ ] project structure 
 * [ ] build performance in 
 

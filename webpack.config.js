@@ -14,7 +14,8 @@ module.exports = {
   entry: './src/index.js',
   module: {
     loaders: [
-      { test: /\.js$/, exclude: ['node_modules'], loader: 'babel-loader' }
+      { test: /\.js$/,   loader: 'babel-loader', exclude: ['node_modules'] },
+      { test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader' }
     ]
   },
   plugins: [
