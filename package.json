@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./**/*.js",
-    "test": "mocha --require babel-register test/**/*.spec.js",
-    "coverage": "nyc mocha --require babel-register test/**/*.spec.js",
+    "test": "nyc mocha --require babel-register test/**/*.spec.js",
     "build": "browserify js/*.js -o dist/bundle.js",
     "build:watch": "watchify js/*.js -o dist/bundle.js -t babelify"
   },
