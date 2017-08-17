@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint ./**/*.js",
     "test": "mocha --require babel-register test/**/*.spec.js",
+    "coverage": "nyc mocha --require babel-register test/**/*.spec.js",
     "build": "browserify js/*.js -o dist/bundle.js",
     "build:watch": "watchify js/*.js -o dist/bundle.js -t babelify"
   },
@@ -28,6 +29,7 @@
     "eslint-plugin-import": "^2.7.0",
     "html-webpack-plugin": "^2.30.1",
     "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
     "power-assert": "^1.4.4",
     "sinon": "^3.2.0",
     "style-loader": "^0.18.2",
