@@ -11,7 +11,10 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 const UglifyJsPluginConfig = new webpack.optimize.UglifyJsPlugin();
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    vendor: ['knockout'],
+    app: './src/index.js'
+  },
   module: {
     loaders: [
       { test: /\.js$/,   loader: 'babel-loader', exclude: ['node_modules'] },
@@ -24,6 +27,6 @@ module.exports = {
   ],
   output: {
     path: `${__dirname}/dist`,
-    filename: 'bundle.js'
+    filename: '[name].js'
   }
 };
