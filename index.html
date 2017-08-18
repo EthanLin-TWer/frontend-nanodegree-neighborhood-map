@@ -11,7 +11,7 @@
     let map
     let marker
     function initGoogleMap() {
-      const markers = [
+      const locations = [
         { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
         { location: 'Beijing',  lat: 39.904, lng: 116.407 },
         { location: 'Xi\'an',   lat: 34.341, lng: 108.939 },
@@ -19,13 +19,13 @@
         { location: 'Wuhan',    lat: 30.592, lng: 114.305 },
       ]
       map = new google.maps.Map(document.getElementById('map'), {
-        center: markers[0],
+        center: locations[0],
         zoom: 5
       })
 
-      markers.forEach(marker => {
+      locations.forEach(location => {
         new google.maps.Marker({
-          position: marker,
+          position: location,
           map
         })
       })
