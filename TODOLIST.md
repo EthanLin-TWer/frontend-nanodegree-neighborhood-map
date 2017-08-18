@@ -92,6 +92,7 @@
     * [ ] 90+ in PageSpeed
     * [ ] 60fps
     * optimization list: https://github.com/linesh-simplicity/frontend-nanodegree-mobile-portfolio/blob/master/Gruntfile.js#L247-L250
+    * https://github.com/google/web-starter-kit
     * https://webpack.github.io/docs/list-of-plugins.html
   * [ ] checkstyle - build-styles-in
     * [ ] code formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide][]
