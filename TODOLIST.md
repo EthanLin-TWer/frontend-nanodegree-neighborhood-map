@@ -32,52 +32,72 @@
   * [x] set up mocha and first test case 
 * [x] styles support - stylus 
   * https://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320
-* [ ] coverage: istabul
+* [x] coverage: istanbul
 * [ ] project structure 
-* [ ] build performance in 
 
 
 ## submit requirements 
 
-* core functions 
-  * [ ] display map markers identifying at least 5 locations when the page is loaded
-  * [ ] a list view of the set of locations defined above 
-  * [ ] provide a filter option that uses an input to filter both the list view and the map markers displayed by default on load, markers and list view should update real time 
-  * [ ] add at least one another third-party apis to provide information when a map marker or list view entry is clicked
-  * [ ] animate a map marker when either the list item associated with it or the map marker itself is selected
-  * [ ] open an infoWindow with the information retrieved using third-party described in the above above step when either a location is selected from the list view or its map marker is selected directly
+* [ ] Core functions 
+  * [ ] Maps and Markers
+    * [ ] map displays all location markers by default 
+    * [ ] display map markers identifying at least 5 locations when the page is loaded
+    * [ ] clicking a marker displays unique information about a location in either an `infoWindow` or `DOM` element
+    * [ ] markers should animate when clicked
+  * [ ] List View 
+    * [ ] a list-view of location names is provided which displays all locations by default 
+    * [ ] clicking a location on the list displays unique information about the location, and animates its' associated map marker(e.g. bouncing, color change) 
+    * [ ] list functionality is responsive and runs error free(duplicated?)
+  * [ ] Filter Locations 
+    * [ ] includes a text input or dropdown menu 
+    * [ ] should be able to filter the map markers and list items to locations matching the text input or selection
+      * realtime filter or should hit enter?
+      * fuzzy match? 
+    * [ ] filter function runs error-free
   * [ ] app's UI should be intuitive to use
 * responsiveness
-  * [ ] the app itself should be mobile responsive
+  * [ ] all application components render on-screen in a responsiveness manner
+    * [ ] desktop
+    * [ ] phone 
   * [ ] all application components are usable across modern desktop, tablet, and phone browsers
+    * [ ] desktop
+    * [ ] tablet
+    * [ ] phone 
 * apis
-  * [ ] google map api
-  * [ ] at least one another third-party apis
-  * [ ] apis should be async 
+  * [ ] Google Map Api
+  * [ ] at least one another third-party apis when a map marker or list view entry is clicked
+  * [ ] provide attribution(source indication) for the source of additional data in your UI and in your `README`
+  * [ ] all api data requests should be async 
 * error handling 
   * [ ] api errors should not affect ui: http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/
-  * [ ] should handle third party library initialization error 
-  * [ ] should handle network issue 
-  * [ ] should handle firewall issue
+  * [ ] should handle API failure using callback techniques
+  * [ ] user should not be left wondering why a component is not working, there should be some visible indication on the page with clear error message
   * [ ] application should run without error
-* code quality
-  * [ ] knockout should be mv*-patternly used
+* [ ] Implementation Constraint
+  * [x] KnockoutJS must be used
+  * [ ] Knockout should be mv*-patternly used
   * [ ] should use two-way data binding in knockout and avoid manual dom manipulation 
+  * [ ] Knockout should not be used to handle the Google Map API
 * Udacious requirements
-  * [ ] offline database: firebase
-  * [ ] automation tools: gulp / grunt 
+  * [ ] offline database: firebase / `localStorage` 
+  * [x] automation tools: webpack
+  * [ ] unique functionality beyond the minimum requirements 
+  * [ ] different color sets
+  * [ ] pure-shortcuts
   * [ ] more api sources 
-  * [ ] performance optimization
+  * [ ] performance optimization - build-performance-in
+    * [ ] 90+ in PageSpeed
+    * [ ] 60fps
+  * [ ] checkstyle - build-styles-in
+    * [ ] code formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide][]
+  * [ ] tests and 90% + coverage - build-sytles-in
   * [ ] everything that you will acquire from a paid product - ui, experience, simple, shortcuts...
-* [ ] performance - build-performance-in
-  * [ ] 90+ in PageSpeed
-  * [ ] 60fps 
-* [ ] styling check - eslint-config-udacity - build-quality-in
 * [ ] README
   * [ ] how to start the project
   * [ ] what third-party apis are used
-  * [ ] project efforts 
+  * [ ] project efforts and takeouts
 
 ---
  
 [rubric]: https://review.udacity.com/#!/rubrics/17/view
+[Udacity JavaScript Style Guide]: http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html
