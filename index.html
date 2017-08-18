@@ -24,18 +24,21 @@
       })
 
       locations.forEach(location => {
-        const marker = new google.maps.Marker({
-          position: location,
-          map
-        })
-        const infoWindow = new google.maps.InfoWindow({
-          content: location.location
-        })
+        const marker = initMarker(location, map)
+        const infoWindow = initInfoWindow(location.location)
 
         marker.addListener('click', () => {
           infoWindow.open(map, marker)
         })
       })
+    }
+
+    function initMarker(position, map) {
+      return new google.maps.Marker({ position, map })
+    }
+
+    function initInfoWindow(content) {
+      return new google.maps.InfoWindow({ content })
     }
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJa7HRNHLV9Ir8MS6afvn9yVfIzpBp2po&callback=initGoogleMap"></script></body>
