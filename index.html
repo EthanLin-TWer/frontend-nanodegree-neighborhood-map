@@ -24,9 +24,16 @@
       })
 
       locations.forEach(location => {
-        new google.maps.Marker({
+        const marker = new google.maps.Marker({
           position: location,
           map
+        })
+        const infoWindow = new google.maps.InfoWindow({
+          content: location.location
+        })
+
+        marker.addListener('click', () => {
+          infoWindow.open(map, marker)
         })
       })
     }

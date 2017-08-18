@@ -40,9 +40,12 @@
 
 * [ ] Core functions 
   * [ ] Maps and Markers
-    * [ ] map displays all location markers by default 
+    * [x] map displays all location markers by default
+    * [ ] determine what locations to use 
     * [x] display map markers identifying at least 5 locations when the page is loaded
-    * [ ] clicking a marker displays unique information about a location in either an `infoWindow` or `DOM` element
+    * [ ] clicking a marker:
+      * [x] displays an `infoWindow` 
+      * [ ] displays unique information about a location in the `infoWindow`
     * [ ] markers should animate when clicked
   * [ ] List View 
     * [ ] a list-view of location names is provided which displays all locations by default 
