@@ -9,10 +9,17 @@
 
   <script>
     let map
+    let marker
     function initGoogleMap() {
+      const position = { lat: 30.572, lng: 104.066 }
       map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8
+        center: position,
+        zoom: 9
+      })
+
+      marker = new google.maps.Marker({
+        position,
+        map,
       })
     }
   </script>
