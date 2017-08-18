@@ -11,15 +11,23 @@
     let map
     let marker
     function initGoogleMap() {
-      const position = { lat: 30.572, lng: 104.066 }
+      const markers = [
+        { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
+        { location: 'Beijing',  lat: 39.904, lng: 116.407 },
+        { location: 'Xi\'an',   lat: 34.341, lng: 108.939 },
+        { location: 'Shenzhen', lat: 22.543, lng: 114.057 },
+        { location: 'Wuhan',    lat: 30.592, lng: 114.305 },
+      ]
       map = new google.maps.Map(document.getElementById('map'), {
-        center: position,
-        zoom: 9
+        center: markers[0],
+        zoom: 5
       })
 
-      marker = new google.maps.Marker({
-        position,
-        map,
+      markers.forEach(marker => {
+        new google.maps.Marker({
+          position: marker,
+          map
+        })
       })
     }
   </script>
