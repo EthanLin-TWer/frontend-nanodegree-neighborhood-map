@@ -88,6 +88,7 @@
   * [ ] performance optimization - build-performance-in
     * [ ] 90+ in PageSpeed
     * [ ] 60fps
+    * https://webpack.github.io/docs/list-of-plugins.html
   * [ ] checkstyle - build-styles-in
     * [ ] code formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide][]
   * [ ] tests and 90% + coverage - build-sytles-in
