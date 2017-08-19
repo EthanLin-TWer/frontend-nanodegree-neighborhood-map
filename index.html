@@ -6,7 +6,11 @@
 </head>
 <body style="display: flex; flex-direction: row">
   <div id="list-view" style="width: 15%">
-    list view
+    <ul data-bind="foreach: filteredLocations">
+      <li>
+        <span data-bind="text: location"></span>
+      </li>
+    </ul>
   </div>
   <div id="map" style="width: 85%"></div>
 
