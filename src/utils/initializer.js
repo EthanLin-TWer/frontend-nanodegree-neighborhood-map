@@ -1,4 +1,4 @@
-import locations from '../components/Map';
+import Map, { locations } from '../components/Map';
 
 export default function initGoogleMap() {
   window.addEventListener('load', () => {
@@ -26,18 +26,8 @@ const registerCallback = () => {
       zoom: 5
     });
 
-    locations.forEach(location => {
-      const marker = initMarker(location, map);
-      const infoWindow = initInfoWindow(location.location);
-
-      marker.addListener('click', () => {
-        infoWindow.open(map, marker);
-      });
-    });
+    window.map = new Map(map);
   };
 
   return callbackFunctionName;
 };
-
-const initMarker = (position, map) => new google.maps.Marker({ position, map });
-const initInfoWindow = (content) => new google.maps.InfoWindow({ content });

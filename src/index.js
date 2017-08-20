@@ -2,7 +2,7 @@
 import ko from 'knockout';
 
 import ListView from './components/ListView';
-import locations from './components/Map';
+import { locations } from './components/Map';
 import initGoogleMap from './utils/initializer';
 import './index.styl';
 
