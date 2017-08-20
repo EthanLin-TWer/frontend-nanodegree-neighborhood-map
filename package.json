@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "gmaps": "^0.4.24",
     "knockout": "^3.4.2"
   }
 }
