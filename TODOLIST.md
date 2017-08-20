@@ -48,7 +48,7 @@
       * [ ] displays unique information about a location in the `infoWindow`
     * [ ] markers should animate when clicked(e.g. bouncing, color change, etc)
   * [ ] List View 
-    * [ ] a list-view of location names is provided which displays all locations by default 
+    * [x] a list-view of location names is provided which displays all locations by default 
     * [ ] clicking a location on the list displays unique information about the location, and animates its' associated map marker 
     * [ ] list functionality is responsive and runs error free(duplicated?)
   * [ ] Filter Locations 
