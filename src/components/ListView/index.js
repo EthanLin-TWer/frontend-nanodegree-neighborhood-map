@@ -5,4 +5,8 @@ export default class ListView {
     this.locations = locations;
     this.filteredLocations = ko.observableArray(this.locations);
   }
+
+  locationSelected() {
+    console.log('-------- location --------');
+  }
 }

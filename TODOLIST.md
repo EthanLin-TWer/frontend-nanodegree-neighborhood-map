@@ -50,7 +50,7 @@
   * [ ] List View 
     * [x] a list-view of location names is provided which displays all locations by default 
     * [ ] clicking a location on the list:
-      * [ ] displays unique informaiton about the location
+      * [ ] displays unique information about the location
       * [ ] animates its' associated map marker 
       * [ ] associated 'list item' styles 
       * [ ] clicking highlight
