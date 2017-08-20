@@ -26,6 +26,7 @@ const registerCallback = () => {
       zoom: 5
     });
 
+    // TODO: [Linesh][8/20/17] ugly but the map & markers need to be globally accessible somehow
     window.map = new Map(map);
   };
 
