@@ -25,7 +25,7 @@ const registerCallback = () => {
   window[callbackFunctionName] = () => {
     const map = new google.maps.Map(document.getElementById('map'), {
       center: defaultLocations[0],
-      zoom: 5
+      zoom: 2
     });
 
     const unsplashService = new UnsplashService();
