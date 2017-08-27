@@ -20,7 +20,8 @@ describe('Map component', () => {
       component = new Map(map, locations);
     });
 
-    it('should filter Chengdu marker when activateMarker(chengdu) is called', function () {
+    it('should filter Chengdu marker when activateMarker(chengdu) is called', () => {
+
     });
   });
 });
