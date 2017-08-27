@@ -26,14 +26,17 @@ export default class ListView {
   }
 
   updateVisibleMarkers(locations) {
-    window.map.updateVisibleMarkers(locations);
+    // Google Map not loaded and becoming globally available yet, skip;
+    if (!window.mapClass) return ;
+
+    window.mapClass.updateVisibleMarkers(locations);
   }
 
   @autobind
   locationSelected(location) {
     this.selectedLocation(location);
 
-    const marker = window.map.findMarker(location);
+    const marker = window.mapClass.findMarker(location);
     if (marker) {
       google.maps.event.trigger(marker, 'click');
     }
