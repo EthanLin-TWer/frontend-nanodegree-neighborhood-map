@@ -62,7 +62,7 @@
       * [x] real-time filter 
       * [ ] fuzzy match?(enhancer) 
     * [x] filter function runs error-free
-  * [ ] app's UI should be intuitive to use
+  * [x] app's UI should be intuitive to use
 * responsiveness
   * [ ] all application components render on-screen in a responsiveness manner
     * [ ] desktop
