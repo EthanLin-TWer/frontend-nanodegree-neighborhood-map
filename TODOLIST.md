@@ -85,11 +85,13 @@
     * [ ] Google Map API
     * [x] Unsplash API failure
   * [ ] application should run without error
-* [ ] Implementation Constraint
+* [x] Implementation Constraint
   * [x] KnockoutJS must be used
-  * [ ] Knockout should be mv*-patternly used
-  * [ ] should use two-way data binding in knockout and avoid manual dom manipulation 
-  * [ ] Knockout should not be used to handle the Google Map API
+  * [x] Knockout should be mv*-patternly used
+  * [x] should use two-way data binding in knockout and avoid manual dom manipulation
+    * `ko.observable()` 
+    * `ko.observableArray()` 
+  * [x] Knockout should not be used to handle the Google Map API
 * Udacious requirements
   * [ ] offline database: firebase / `localStorage` 
   * [x] automation tools: webpack
