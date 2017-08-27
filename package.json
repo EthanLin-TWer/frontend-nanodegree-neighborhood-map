@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "knockout": "^3.4.2"
+    "knockout": "^3.4.2",
+    "unsplash-js": "^4.6.0"
   }
 }

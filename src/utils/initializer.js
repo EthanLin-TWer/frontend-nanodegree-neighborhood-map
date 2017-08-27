@@ -1,4 +1,5 @@
 import Map from '../components/Map';
+import UnsplashService from './unsplashService'
 
 export const defaultLocations = [
   { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
@@ -34,8 +35,9 @@ const registerCallback = () => {
       zoom: 5
     });
 
+    const unsplashService = new UnsplashService();
     // TODO: [Linesh][8/20/17] ugly but the map & markers need to be globally accessible somehow
-    window.mapClass = new Map(map, defaultLocations);
+    window.mapClass = new Map(map, defaultLocations, unsplashService);
     window.mapClass.updateVisibleMarkers(defaultLocations);
   };
 
