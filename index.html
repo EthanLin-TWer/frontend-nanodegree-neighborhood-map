@@ -5,7 +5,10 @@
   <title>Neighborhood Map</title>
 </head>
 <body style="display: flex; flex-direction: row">
-  <div id="list-view" style="width: 15%">
+  <div id="list-view" style="width: 20%">
+    <p>
+      <strong>Thought</strong>Works offices...
+    </p>
     <input data-bind="textInput: searcher" />
 
     <ul data-bind="foreach: filteredLocations">
@@ -14,6 +17,6 @@
       </li>
     </ul>
   </div>
-  <div id="map" style="width: 85%"></div>
+  <div id="map" style="width: 80%"></div>
 </body>
 </html>

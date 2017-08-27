@@ -58,9 +58,9 @@
     * [ ] list functionality is responsive and runs error free(duplicated?)
   * [ ] Filter Locations 
     * [x] includes a text input or dropdown menu 
-    * [ ] should be able to filter the map markers and list items to locations matching the text input or selection
+    * [x] should be able to filter the **map markers** and **list items** to locations matching the text input or selection
       * [x] real-time filter 
-      * fuzzy match? 
+      * [ ] fuzzy match?(enhancer) 
     * [ ] filter function runs error-free
   * [ ] app's UI should be intuitive to use
 * responsiveness
@@ -72,7 +72,7 @@
     * [ ] tablet
     * [ ] phone 
 * apis
-  * [ ] Google Map Api
+  * [x] Google Map Api
   * [ ] at least one another third-party apis when a map marker or list view entry is clicked
   * [ ] provide attribution(source indication) for the source of additional data in your UI and in your `README`
   * [ ] all api data requests should be async 
