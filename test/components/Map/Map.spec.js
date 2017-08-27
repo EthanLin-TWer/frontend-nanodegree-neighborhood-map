@@ -52,9 +52,27 @@ describe('Map component', () => {
     it('should update all markers to visible when locations matches exactly all the pre-defined locations', () => {
       const locations = [
         { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
-        { location: 'Beijing',  lat: 39.904, lng: 116.406669 },
+        { location: 'Beijing',  lat: 39.904, lng: 116.407 },
         { location: 'Xi\'an',   lat: 34.341, lng: 108.939 },
         { location: 'Shenzhen', lat: 22.543, lng: 114.057 },
+        { location: 'Wuhan',    lat: 30.592, lng: 114.305 },
+      ];
+
+      component.updateVisibleMarkers(locations);
+
+      assert(component.markers()[0].setVisible.calledWith(true));
+      assert(component.markers()[1].setVisible.calledWith(true));
+      assert(component.markers()[2].setVisible.calledWith(true));
+      assert(component.markers()[3].setVisible.calledWith(true));
+      assert(component.markers()[4].setVisible.calledWith(true));
+    });
+
+    it('should support float number comparison', () => {
+      const locations = [
+        { location: 'Chengdu',  lat: 30.572, lng: 104.065999999 },
+        { location: 'Beijing',  lat: 39.904, lng: 116.406999998 },
+        { location: 'Xi\'an',   lat: 34.341, lng: 108.938999999 },
+        { location: 'Shenzhen', lat: 22.543, lng: 114.057000001 },
         { location: 'Wuhan',    lat: 30.592, lng: 114.305 },
       ];
 
