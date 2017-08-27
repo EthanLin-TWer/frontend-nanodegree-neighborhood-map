@@ -15,15 +15,14 @@ Visit `localhost:8080` and the page will be open for you!
 
 ## Third Party APIs
 
-* [ ] what third-party apis are used
-* [ ] attributions to third party API  
+Credits to [Unsplash API][].
 
 ## Efforts & Takeouts
 
-* [ ] project efforts and takeouts
-
+To be continued.
 
 ---
 
 [Badges: Travis CI]: https://travis-ci.org/linesh-simplicity/frontend-nanodegree-neighborhood-map.svg?branch=master
 [Links: Travis CI]: https://travis-ci.org/linesh-simplicity/frontend-nanodegree-neighborhood-map
+[Unsplash API]: https://community.unsplash.com/developers 
