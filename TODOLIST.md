@@ -79,6 +79,8 @@
 * error handling 
   * [ ] api errors should not affect ui: http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/
   * [ ] should handle API failure using callback techniques
+    * [ ] Google Map API
+    * [x] Unsplash API failure
   * [ ] user should not be left wondering why a component is not working, there should be some visible indication on the page with clear error message
   * [ ] application should run without error
 * [ ] Implementation Constraint

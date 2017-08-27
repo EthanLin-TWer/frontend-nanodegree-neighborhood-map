@@ -43,28 +43,29 @@ class Map {
         infoWindow.setContent('Loading city photos from Unsplash...');
         infoWindow.open(this.map, marker);
 
-        this.unsplashService.searchPhotos(place).then(data => {
-          const firstPhoto = data.results[0];
-          const { user, links, urls } = firstPhoto;
+        this.unsplashService.searchPhotos(place)
+          .then(data => {
+            const { user, links, urls } = data.results[0];
 
-          const imageUrl = urls.raw;
-          const author = {
-            name: user.name,
-            profile: user.links.html
-          };
-          const attribution = links.html;
+            const imageUrl = urls.raw;
+            const authorName = user.name;
+            const authorProfile = user.links.html;
+            const attribution = links.html;
 
-          infoWindow.setContent(`
-            <div style="width: 400px; height: 470px;">
-              <p><strong>${place}</strong></p>
-              
-              <img src="${imageUrl}" width="400" height="400"/>
-              
-              <a href="${author.profile}">${author.name}</a> |
-              <a href="${attribution}">Unsplash</a>
-            </div>
-          `);
-        });
+            infoWindow.setContent(`
+              <div style="width: 400px; height: 470px;">
+                <p><strong>${place}</strong></p>
+                
+                <img src="${imageUrl}" width="400" height="400"/>
+                
+                <a href="${authorProfile}">${authorName}</a> |
+                <a href="${attribution}">Unsplash</a>
+              </div>
+            `);
+          })
+          .catch(() => {
+            infoWindow.setContent('Retrieving photos failed. Please click the marker again to retry.');
+          });
       });
 
       return marker;
