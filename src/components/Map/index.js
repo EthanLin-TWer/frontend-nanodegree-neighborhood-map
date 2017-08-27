@@ -11,9 +11,12 @@ class Map {
   @autobind
   updateVisibleMarkers(visibleLocations) {
     this.markers().forEach(marker => {
-      const { lat, lng } = marker.getPosition();
+      const lat = parseFloat(marker.getPosition().lat()).toFixed(2);
+      const lng = parseFloat(marker.getPosition().lng()).toFixed(2);
+
       const visibility = visibleLocations.some(location => {
-        return location.lat === lat() && location.lng === lng();
+        return parseFloat(location.lat).toFixed(2) === lat
+          && parseFloat(location.lng).toFixed(2) === lng;
       });
 
       marker.setVisible(visibility);
