@@ -26,22 +26,22 @@ describe('Map component', () => {
       component = new Map(map, locations);
     });
 
-    it('should filter Chengdu marker when activateMarker(chengdu) is called', () => {
+    it('should filter Chengdu marker when findMarker(chengdu) is called', () => {
       const chengdu = { location: 'Chengdu', lat: 30.572, lng: 104.066 };
       const expected = { location: 'Chengdu', lat: 30.572, lng: 104.066 };
 
-      const activated = component.activateMarker(chengdu);
+      const marker = component.findMarker(chengdu);
 
-      assert.equal(activated.getPosition().lat(), expected.lat);
-      assert.equal(activated.getPosition().lng(), expected.lng);
+      assert.equal(marker.getPosition().lat(), expected.lat);
+      assert.equal(marker.getPosition().lng(), expected.lng);
     });
 
-    it('should return null when activateMarker(shenzhen) is called given shenzhen is not on location list', () => {
+    it('should return null when findMarker(shenzhen) is called given shenzhen is not on location list', () => {
       const shenzhen = { location: 'Shenzhen', lat: 22.543, lng: 114.057 };
 
-      const activated = component.activateMarker(shenzhen);
+      const marker = component.findMarker(shenzhen);
 
-      assert.deepEqual(activated, null);
+      assert.deepEqual(marker, null);
     });
   });
 });

@@ -23,10 +23,10 @@ class Map {
   }
 
   @autobind
-  activateMarker(location) {
-    const result = this.markers().find(marker => marker.getPosition().lat() === location.lat);
-
-    return result || null;
+  findMarker(location) {
+    return this.markers().find(marker => {
+      return marker.getPosition().lat() === location.lat;
+    });
   }
 
   initMarker(position, map) {
