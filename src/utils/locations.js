@@ -1,6 +1,4 @@
 const defaultLocations = [
-  { location: 'Johannesburg', lat: -26.193, lng: 28.035 },
-  { location: 'Brisbane', lat: -27.465, lng: 153.025 },
   { location: 'Melbourne', lat: -37.816, lng: 144.961 },
   { location: 'Perth', lat: -31.955, lng: 115.857 },
   { location: 'Sydney', lat: -33.862, lng: 151.20 },
