@@ -26,5 +26,26 @@ describe('ListView component', () => {
 
       assert.deepEqual(component.filteredLocations(), expected);
     });
+
+    it('should return Beijing when beijing(case insensitive) is provided as search condition', () => {
+      const expected = [
+        { location: 'Beijing',  lat: 39.904, lng: 116.407 },
+      ];
+
+      component.searcher('beijing');
+
+      assert.deepEqual(component.filteredLocations(), expected);
+    });
+
+    it('should support partial match when "en" is provided as search condition', () => {
+      const expected = [
+        { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
+        { location: 'Shenzhen', lat: 22.543, lng: 114.057 },
+      ];
+
+      component.searcher('en');
+
+      assert.deepEqual(component.filteredLocations(), expected);
+    });
   });
 });
