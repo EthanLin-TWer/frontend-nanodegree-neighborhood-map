@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Neighborhood Map</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/7b81c4e16f.css">
+</head>
+
+<body>
+  <div id="list-view">
+    <p class="title">
+      <strong>Thought</strong>Works
+    </p>
+
+    <div class="input-group">
+      <span><i class="fa fa-search" aria-hidden="true"></i></span>
+      <input class="search-box" data-bind="textInput: searcher" />
+    </div>
+
+    <ul class="office-list list-group" data-bind="foreach: filteredLocations">
+      <li class="list-group-item list-group-item-primary"
+          data-bind="click: $root.locationSelected,
+                     css: { active: $data.location === $root.selectedLocation().location }">
+        <span data-bind="text: location"></span>
+      </li>
+    </ul>
+  </div>
+  <div id="map"></div>
+<script type="text/javascript" src="app.js"></script><script type="text/javascript" src="vendor.js"></script></body>
+</html>
