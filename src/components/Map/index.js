@@ -26,7 +26,7 @@ class Map {
   activateMarker(location) {
     const result = this.markers().find(marker => marker.getPosition().lat() === location.lat);
 
-    return result || {};
+    return result || null;
   }
 
   initMarker(position, map) {

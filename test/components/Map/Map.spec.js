@@ -36,12 +36,12 @@ describe('Map component', () => {
       assert.equal(activated.getPosition().lng(), expected.lng);
     });
 
-    it('should return {} when activateMarker(shenzhen) is called given shenzhen is not on location list', () => {
+    it('should return null when activateMarker(shenzhen) is called given shenzhen is not on location list', () => {
       const shenzhen = { location: 'Shenzhen', lat: 22.543, lng: 114.057 };
 
       const activated = component.activateMarker(shenzhen);
 
-      assert.deepEqual(activated, {});
+      assert.deepEqual(activated, null);
     });
   });
 });
