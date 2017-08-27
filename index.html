@@ -6,6 +6,7 @@
 </head>
 <body style="display: flex; flex-direction: row">
   <div id="list-view" style="width: 15%">
+
     <ul data-bind="foreach: filteredLocations">
       <li data-bind="click: $root.locationSelected">
         <span data-bind="text: location"></span>

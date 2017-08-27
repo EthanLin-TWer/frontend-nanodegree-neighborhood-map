@@ -1,14 +1,14 @@
 import ko from 'knockout';
+import autobind from 'autobind-decorator';
 
 export default class ListView {
   constructor(locations) {
     this.locations = locations;
     this.filteredLocations = ko.observableArray(this.locations);
     this.selectedLocation = ko.observable({});
-
-    this.locationSelected = this.locationSelected.bind(this);
   }
 
+  @autobind
   locationSelected(location) {
     this.selectedLocation(location);
     const marker = window.map.findMarker(location);
