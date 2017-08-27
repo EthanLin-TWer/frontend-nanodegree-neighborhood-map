@@ -1,5 +1,4 @@
 import ko from 'knockout';
-import autobind from 'autobind-decorator';
 
 export default class ListView {
   constructor(locations) {
@@ -23,6 +22,8 @@ export default class ListView {
       this.updateVisibleMarkers(filtered);
       return filtered;
     });
+
+    this.locationSelected = this.locationSelected.bind(this);
   }
 
   updateVisibleMarkers(locations) {
@@ -32,7 +33,6 @@ export default class ListView {
     window.mapClass.updateVisibleMarkers(locations);
   }
 
-  @autobind
   locationSelected(location) {
     this.selectedLocation(location);
 
