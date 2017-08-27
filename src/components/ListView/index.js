@@ -11,6 +11,10 @@ export default class ListView {
 
   locationSelected(location) {
     this.selectedLocation(location);
-    window.map.activateMarker(location);
+    const marker = window.map.findMarker(location);
+
+    if (marker) {
+      google.maps.event.trigger(marker, 'click');
+    }
   }
 }
