@@ -47,14 +47,14 @@
       * [x] displays an `infoWindow` 
       * [x] displays unique information about a location in the `infoWindow`
     * [x] markers should animate when clicked(e.g. bouncing, color change, etc)
-  * [ ] List View 
+  * [x] List View 
     * [x] a list-view of location names is provided which displays all locations by default 
-    * [ ] clicking a location on the list:
+    * [x] clicking a location on the list:
       * [x] displays unique information about the location
       * [x] animates its' associated map marker... 
-      * [ ] and associated 'list item' styles 
-      * [ ] clicking highlight
-      * [ ] clicking animation
+      * [x] and associated 'list item' styles 
+      * [x] clicking highlight
+      * [x] clicking animation
     * [ ] list functionality is responsive and runs error free(duplicated?)
   * [ ] Filter Locations 
     * [x] includes a text input or dropdown menu 
