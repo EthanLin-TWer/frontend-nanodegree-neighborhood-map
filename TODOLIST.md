@@ -82,6 +82,8 @@
     * [ ] Google Map API
     * [x] Unsplash API failure
   * [ ] user should not be left wondering why a component is not working, there should be some visible indication on the page with clear error message
+    * [ ] Google Map API
+    * [x] Unsplash API failure
   * [ ] application should run without error
 * [ ] Implementation Constraint
   * [x] KnockoutJS must be used

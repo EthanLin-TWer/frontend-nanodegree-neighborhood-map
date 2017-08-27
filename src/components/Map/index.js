@@ -73,7 +73,11 @@ class Map {
   }
 
   initMarker(position, map) {
-    return new google.maps.Marker({ position, map });
+    return new google.maps.Marker({
+      position,
+      map,
+      animation: google.maps.Animation.DROP
+    });
   }
 
   initInfoWindow(content) {
