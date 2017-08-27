@@ -11,6 +11,6 @@ export default class ListView {
 
   locationSelected(location) {
     this.selectedLocation(location);
-
+    window.map.activateMarker(location);
   }
 }

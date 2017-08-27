@@ -16,7 +16,12 @@ describe('Map component', () => {
         { location: 'Beijing', lat: 39.904, lng: 116.407 }
       ];
 
-      Map.prototype.initMarkers = sinon.stub().callsFake(() => locations);
+      Map.prototype.initMarkers = sinon.stub().callsFake(() => locations.map(location => ({
+        getPosition: () => ({
+          lat: () => location.lat,
+          lng: () => location.lng
+        })
+      })));
 
       component = new Map(map, locations);
     });
@@ -27,7 +32,16 @@ describe('Map component', () => {
 
       const activated = component.activateMarker(chengdu);
 
-      assert.deepEqual(activated, expected);
+      assert.equal(activated.getPosition().lat(), expected.lat);
+      assert.equal(activated.getPosition().lng(), expected.lng);
+    });
+
+    it('should return {} when activateMarker(shenzhen) is called given shenzhen is not on location list', () => {
+      const shenzhen = { location: 'Shenzhen', lat: 22.543, lng: 114.057 };
+
+      const activated = component.activateMarker(shenzhen);
+
+      assert.deepEqual(activated, {});
     });
   });
 });

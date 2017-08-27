@@ -22,8 +22,11 @@ class Map {
     });
   }
 
+  @autobind
   activateMarker(location) {
-    return location;
+    const result = this.markers().find(marker => marker.getPosition().lat() === location.lat);
+
+    return result || {};
   }
 
   initMarker(position, map) {
