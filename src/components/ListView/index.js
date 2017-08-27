@@ -6,6 +6,8 @@ export default class ListView {
     this.locations = locations;
     this.filteredLocations = ko.observableArray(this.locations);
     this.selectedLocation = ko.observable({});
+
+    this.searcher = ko.observable('');
   }
 
   @autobind

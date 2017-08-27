@@ -57,7 +57,7 @@
       * [ ] clicking animation
     * [ ] list functionality is responsive and runs error free(duplicated?)
   * [ ] Filter Locations 
-    * [ ] includes a text input or dropdown menu 
+    * [x] includes a text input or dropdown menu 
     * [ ] should be able to filter the map markers and list items to locations matching the text input or selection
       * realtime filter or should hit enter?
       * fuzzy match? 
