@@ -5,6 +5,7 @@
     "babel-preset-power-assert"
   ],
   "plugins": [
+    "transform-decorators-legacy",
     "transform-export-extensions",
     "babel-plugin-espower"
   ]

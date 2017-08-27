@@ -11,5 +11,6 @@ export default class ListView {
 
   locationSelected(location) {
     this.selectedLocation(location);
+
   }
 }

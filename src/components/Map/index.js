@@ -1,4 +1,5 @@
 import ko from 'knockout';
+import autobind from 'autobind-decorator';
 
 export const locations = [
   { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
@@ -16,6 +17,7 @@ class Map {
     this.markers = ko.observableArray(this.initMarkers());
   }
 
+  @autobind
   initMarkers() {
     return locations.map(location => {
       const marker = this.initMarker(location, this.map);
