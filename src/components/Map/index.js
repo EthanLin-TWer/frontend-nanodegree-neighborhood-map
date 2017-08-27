@@ -59,6 +59,7 @@ class Map {
             const authorName = user.name;
             const authorProfile = user.links.html;
             const attribution = links.html;
+            const utmParameter = 'utm_source=udacity-neighborhood-map&utm_medium=referral&utm_campaign=api-credit';
 
             infoWindow.setContent(`
               <div style="width: 400px; height: 470px;">
@@ -66,8 +67,8 @@ class Map {
                 
                 <img src="${imageUrl}" width="400" height="400"/>
                 
-                <a href="${authorProfile}">${authorName}</a> |
-                <a href="${attribution}">Unsplash</a>
+                <a href="${authorProfile}?${utmParameter}">${authorName}</a> |
+                <a href="${attribution}?${utmParameter}">Unsplash</a>
               </div>
             `);
           })
