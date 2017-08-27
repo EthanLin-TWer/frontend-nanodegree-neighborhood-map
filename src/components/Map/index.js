@@ -40,6 +40,14 @@ class Map {
       const infoWindow = this.initInfoWindow(place);
 
       marker.addListener('click', () => {
+        if (marker.getAnimation()) {
+          marker.setAnimation(null);
+          infoWindow.close();
+
+          return ;
+        }
+
+        marker.setAnimation(google.maps.Animation.BOUNCE);
         infoWindow.setContent('Loading city photos from Unsplash...');
         infoWindow.open(this.map, marker);
 
@@ -67,6 +75,8 @@ class Map {
             infoWindow.setContent('Retrieving photos failed. Please click the marker again to retry.');
           });
       });
+
+      infoWindow.addListener('closeclick', () => google.maps.event.trigger(marker, 'click'));
 
       return marker;
     });
