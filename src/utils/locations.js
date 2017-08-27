@@ -1,11 +1,11 @@
 const defaultLocations = [
+  { location: 'Shenzhen', lat: 22.540, lng: 113.954 },
   { location: 'Melbourne', lat: -37.816, lng: 144.961 },
   { location: 'Perth', lat: -31.955, lng: 115.857 },
   { location: 'Sydney', lat: -33.862, lng: 151.20 },
   { location: 'Chengdu', lat: 30.670, lng: 104.060 },
   { location: 'Beijing', lat: 39.920, lng: 116.460 },
   { location: 'Shanghai', lat: 31.220, lng: 121.480 },
-  { location: 'Shenzhen', lat: 22.540, lng: 113.954 },
   { location: 'Xian', lat: 34.208, lng: 108.841 },
   { location: 'Wuhan', lat: 30.505, lng: 114.402 },
   { location: 'Barcelona', lat: 41.402, lng: 2.192 },
