@@ -1,4 +1,5 @@
 import ko from 'knockout';
+import autobind from 'autobind-decorator';
 
 class Map {
   constructor(map, defaultLocations, unsplashService) {
@@ -7,12 +8,9 @@ class Map {
     this.markers = ko.observableArray(this.initMarkers());
 
     this.unsplashService = unsplashService;
-
-    this.updateVisibleMarkers = this.updateVisibleMarkers.bind(this);
-    this.findMarker = this.findMarker.bind(this);
-    this.initMarkers = this.initMarkers.bind(this);
   }
 
+  @autobind
   updateVisibleMarkers(visibleLocations) {
     this.markers().forEach(marker => {
       const lat = parseFloat(marker.getPosition().lat()).toFixed(2);
@@ -27,12 +25,14 @@ class Map {
     });
   }
 
+  @autobind
   findMarker(location) {
     return this.markers().find(marker => {
       return marker.getPosition().lat() === location.lat;
     });
   }
 
+  @autobind
   initMarkers() {
     return this.locations.map(location => {
       const place = location.location;
