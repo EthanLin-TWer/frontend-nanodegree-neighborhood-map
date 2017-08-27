@@ -14,8 +14,10 @@
 
     <input class="search-box" data-bind="textInput: searcher" />
 
-    <ul class="office-list" data-bind="foreach: filteredLocations">
-      <li data-bind="click: $root.locationSelected">
+    <ul class="office-list list-group" data-bind="foreach: filteredLocations">
+      <li class="list-group-item list-group-item-primary"
+          data-bind="click: $root.locationSelected,
+                     css: { active: $data.location === $root.selectedLocation().location }">
         <span data-bind="text: location"></span>
       </li>
     </ul>
