@@ -60,11 +60,11 @@ describe('Map component', () => {
 
       component.updateVisibleMarkers(locations);
 
-      assert.equal(component.markers()[0].setVisible.calledWith(true), true);
-      assert.equal(component.markers()[1].setVisible.calledWith(true), true);
-      assert.equal(component.markers()[2].setVisible.calledWith(true), true);
-      assert.equal(component.markers()[3].setVisible.calledWith(true), true);
-      assert.equal(component.markers()[4].setVisible.calledWith(true), true);
+      assert(component.markers()[0].setVisible.calledWith(true));
+      assert(component.markers()[1].setVisible.calledWith(true));
+      assert(component.markers()[2].setVisible.calledWith(true));
+      assert(component.markers()[3].setVisible.calledWith(true));
+      assert(component.markers()[4].setVisible.calledWith(true));
     });
   });
 });
