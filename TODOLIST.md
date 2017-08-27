@@ -39,14 +39,14 @@
 ## submit requirements 
 
 * [ ] Core functions 
-  * [ ] Maps and Markers
+  * [x] Maps and Markers
     * [x] map displays all location markers by default
-    * [ ] determine what locations to use 
+    * [x] determine what locations to use 
     * [x] display map markers identifying at least 5 locations when the page is loaded
-    * [ ] clicking a marker:
+    * [x] clicking a marker:
       * [x] displays an `infoWindow` 
-      * [ ] displays unique information about a location in the `infoWindow`
-    * [ ] markers should animate when clicked(e.g. bouncing, color change, etc)
+      * [x] displays unique information about a location in the `infoWindow`
+    * [x] markers should animate when clicked(e.g. bouncing, color change, etc)
   * [ ] List View 
     * [x] a list-view of location names is provided which displays all locations by default 
     * [ ] clicking a location on the list:
