@@ -2,7 +2,16 @@
 
 ## Getting started
 
-* [ ] how to start the project
+Simply visit http://blog.linesh.tw/frontend-nanodegree-neighborhood-map/dist/ and play around! 
+
+If you are interested in how the code works, you can checkout the code and run the following commands to have a local server up and running for you to play with: 
+
+```bash
+npm install
+npm start 
+```
+
+Visit `localhost:8080` and the page will be open for you!
 
 ## Third Party APIs
 
