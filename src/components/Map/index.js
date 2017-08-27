@@ -23,7 +23,7 @@ class Map {
   }
 
   activateMarker(location) {
-
+    return location;
   }
 
   initMarker(position, map) {

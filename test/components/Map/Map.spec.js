@@ -8,11 +8,12 @@ import Map from '../../../src/components/Map';
 describe('Map component', () => {
   describe('filter function', () => {
     let component;
+
     beforeEach('init component with map and initMarker() mocked out', () => {
       const map = sinon.spy();
       const locations = [
-        { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
-        { location: 'Beijing',  lat: 39.904, lng: 116.407 }
+        { location: 'Chengdu', lat: 30.572, lng: 104.066 },
+        { location: 'Beijing', lat: 39.904, lng: 116.407 }
       ];
 
       Map.prototype.initMarkers = sinon.stub().callsFake(() => locations);
@@ -21,7 +22,12 @@ describe('Map component', () => {
     });
 
     it('should filter Chengdu marker when activateMarker(chengdu) is called', () => {
+      const chengdu = { location: 'Chengdu', lat: 30.572, lng: 104.066 };
+      const expected = { location: 'Chengdu', lat: 30.572, lng: 104.066 };
 
+      const activated = component.activateMarker(chengdu);
+
+      assert.deepEqual(activated, expected);
     });
   });
 });
