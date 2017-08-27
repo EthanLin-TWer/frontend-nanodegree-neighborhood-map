@@ -29,7 +29,7 @@ describe('ListView component', () => {
       ];
 
       assert.deepEqual(component.filteredLocations(), expected);
-      assert.equal(ListView.prototype.updateVisibleMarkers.calledOnce, false);
+      assert.equal(ListView.prototype.updateVisibleMarkers.calledWith(expected), true);
     });
 
     it('should return Beijing when beijing(case insensitive) is provided as search condition', () => {
@@ -40,7 +40,7 @@ describe('ListView component', () => {
       component.searcher('beijing');
 
       assert.deepEqual(component.filteredLocations(), expected);
-      assert.equal(ListView.prototype.updateVisibleMarkers.calledOnce, true);
+      assert.equal(ListView.prototype.updateVisibleMarkers.calledWith(expected), true);
     });
 
     it('should support partial match when "en" is provided as search condition', () => {
@@ -52,7 +52,7 @@ describe('ListView component', () => {
       component.searcher('en');
 
       assert.deepEqual(component.filteredLocations(), expected);
-      assert.equal(ListView.prototype.updateVisibleMarkers.calledOnce, true);
+      assert.equal(ListView.prototype.updateVisibleMarkers.calledWith(expected), true);
     });
   });
 });

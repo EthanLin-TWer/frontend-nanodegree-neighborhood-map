@@ -8,7 +8,10 @@ export default class ListView {
 
     this.searcher = ko.observable('');
     this.filteredLocations = ko.computed(() => {
-      if (!this.searcher()) return this.locations;
+      if (!this.searcher()) {
+        this.updateVisibleMarkers(this.locations);
+        return this.locations;
+      }
 
       const filtered = this.locations.filter(location => {
         const place = location.location.toUpperCase();
@@ -18,7 +21,6 @@ export default class ListView {
       });
 
       this.updateVisibleMarkers(filtered);
-
       return filtered;
     });
   }

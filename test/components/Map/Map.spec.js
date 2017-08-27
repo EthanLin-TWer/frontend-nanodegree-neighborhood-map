@@ -21,7 +21,8 @@ describe('Map component', () => {
       getPosition: () => ({
         lat: () => location.lat,
         lng: () => location.lng
-      })
+      }),
+      setVisible: sinon.spy(),
     })));
 
     component = new Map(map, locations);
@@ -48,5 +49,22 @@ describe('Map component', () => {
   });
 
   describe('update marker visibility function', () => {
+    it('should update all markers to visible when locations matches exactly all the pre-defined locations', () => {
+      const locations = [
+        { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
+        { location: 'Beijing',  lat: 39.904, lng: 116.407 },
+        { location: 'Xi\'an',   lat: 34.341, lng: 108.939 },
+        { location: 'Shenzhen', lat: 22.543, lng: 114.057 },
+        { location: 'Wuhan',    lat: 30.592, lng: 114.305 },
+      ];
+
+      component.updateVisibleMarkers(locations);
+
+      assert.equal(component.markers()[0].setVisible.calledWith(true), true);
+      assert.equal(component.markers()[1].setVisible.calledWith(true), true);
+      assert.equal(component.markers()[2].setVisible.calledWith(true), true);
+      assert.equal(component.markers()[3].setVisible.calledWith(true), true);
+      assert.equal(component.markers()[4].setVisible.calledWith(true), true);
+    });
   });
 });
