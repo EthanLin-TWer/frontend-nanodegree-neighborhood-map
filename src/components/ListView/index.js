@@ -10,13 +10,21 @@ export default class ListView {
     this.filteredLocations = ko.computed(() => {
       if (!this.searcher()) return this.locations;
 
-      return this.locations.filter(location => {
+      const filtered = this.locations.filter(location => {
         const place = location.location.toUpperCase();
         const searcher = this.searcher().toUpperCase();
 
         return place.includes(searcher);
       });
+
+      this.updateVisibleMarkers(filtered);
+
+      return filtered;
     });
+  }
+
+  updateVisibleMarkers(locations) {
+    window.map.updateVisibleMarkers(locations);
   }
 
   @autobind

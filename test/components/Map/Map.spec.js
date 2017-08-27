@@ -6,26 +6,28 @@ import sinon from 'sinon';
 import Map from '../../../src/components/Map';
 
 describe('Map component', () => {
+  let component;
+
+  beforeEach('init component with map and initMarker() mocked out', () => {
+    const map = sinon.spy();
+    const locations = [
+      { location: 'Chengdu',  lat: 30.572, lng: 104.066 },
+      { location: 'Beijing',  lat: 39.904, lng: 116.407 },
+      { location: 'Xi\'an',   lat: 34.341, lng: 108.939 },
+      { location: 'Shenzhen', lat: 22.543, lng: 114.057 },
+      { location: 'Wuhan',    lat: 30.592, lng: 114.305 },
+    ];
+    Map.prototype.initMarkers = sinon.stub().callsFake(() => locations.map(location => ({
+      getPosition: () => ({
+        lat: () => location.lat,
+        lng: () => location.lng
+      })
+    })));
+
+    component = new Map(map, locations);
+  });
+
   describe('filter function', () => {
-    let component;
-
-    beforeEach('init component with map and initMarker() mocked out', () => {
-      const map = sinon.spy();
-      const locations = [
-        { location: 'Chengdu', lat: 30.572, lng: 104.066 },
-        { location: 'Beijing', lat: 39.904, lng: 116.407 }
-      ];
-
-      Map.prototype.initMarkers = sinon.stub().callsFake(() => locations.map(location => ({
-        getPosition: () => ({
-          lat: () => location.lat,
-          lng: () => location.lng
-        })
-      })));
-
-      component = new Map(map, locations);
-    });
-
     it('should filter Chengdu marker when findMarker(chengdu) is called', () => {
       const chengdu = { location: 'Chengdu', lat: 30.572, lng: 104.066 };
       const expected = { location: 'Chengdu', lat: 30.572, lng: 104.066 };
@@ -37,11 +39,14 @@ describe('Map component', () => {
     });
 
     it('should return null when findMarker(shenzhen) is called given shenzhen is not on location list', () => {
-      const shenzhen = { location: 'Shenzhen', lat: 22.543, lng: 114.057 };
+      const somePlace = { location: 'Somewhere Else', lat: 79.32, lng: 113.23 };
 
-      const marker = component.findMarker(shenzhen);
+      const marker = component.findMarker(somePlace);
 
       assert.deepEqual(marker, null);
     });
+  });
+
+  describe('update marker visibility function', () => {
   });
 });

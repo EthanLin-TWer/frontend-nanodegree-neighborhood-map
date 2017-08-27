@@ -9,6 +9,25 @@ class Map {
   }
 
   @autobind
+  updateVisibleMarkers(visibleLocations) {
+    this.markers().forEach(marker => {
+      const { lat, lng } = marker.getPosition();
+      const visibility = visibleLocations.some(location => {
+        return location.lat === lat() && location.lng === lng();
+      });
+
+      marker.setVisible(visibility);
+    });
+  }
+
+  @autobind
+  findMarker(location) {
+    return this.markers().find(marker => {
+      return marker.getPosition().lat() === location.lat;
+    });
+  }
+
+  @autobind
   initMarkers() {
     return this.locations.map(location => {
       const marker = this.initMarker(location, this.map);
@@ -19,13 +38,6 @@ class Map {
       });
 
       return marker;
-    });
-  }
-
-  @autobind
-  findMarker(location) {
-    return this.markers().find(marker => {
-      return marker.getPosition().lat() === location.lat;
     });
   }
 
