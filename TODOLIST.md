@@ -59,7 +59,7 @@
   * [ ] Filter Locations 
     * [x] includes a text input or dropdown menu 
     * [ ] should be able to filter the map markers and list items to locations matching the text input or selection
-      * realtime filter or should hit enter?
+      * [x] real-time filter 
       * fuzzy match? 
     * [ ] filter function runs error-free
   * [ ] app's UI should be intuitive to use
@@ -101,7 +101,7 @@
     * https://webpack.github.io/docs/list-of-plugins.html
   * [ ] checkstyle - build-styles-in
     * [ ] code formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide][]
-  * [ ] tests and 90% + coverage - build-sytles-in
+  * [ ] tests and 90% + coverage - build-styles-in
   * [ ] everything that you will acquire from a paid product - ui, experience, simple, shortcuts...
 * [ ] README
   * [ ] how to start the project
