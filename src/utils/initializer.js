@@ -24,7 +24,7 @@ const registerCallback = () => {
 
   window[callbackFunctionName] = () => {
     const map = new google.maps.Map(document.getElementById('map'), {
-      center: defaultLocations[2],
+      center: defaultLocations[0],
       zoom: 5
     });
 
