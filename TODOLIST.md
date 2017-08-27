@@ -51,7 +51,7 @@
     * [x] a list-view of location names is provided which displays all locations by default 
     * [ ] clicking a location on the list:
       * [x] displays unique information about the location
-      * [ ] animates its' associated map marker... 
+      * [x] animates its' associated map marker... 
       * [ ] and associated 'list item' styles 
       * [ ] clicking highlight
       * [ ] clicking animation
