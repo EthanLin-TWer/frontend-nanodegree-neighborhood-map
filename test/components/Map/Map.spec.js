@@ -66,5 +66,19 @@ describe('Map component', () => {
       assert(component.markers()[3].setVisible.calledWith(true));
       assert(component.markers()[4].setVisible.calledWith(true));
     });
+
+    it('should update Chengdu marker to visible and others to invisible when only update chengdu markers', () => {
+      const locations = [
+        { location: 'Chengdu', lat: 30.572, lng: 104.066 }
+      ];
+
+      component.updateVisibleMarkers(locations);
+
+      assert(component.markers()[0].setVisible.calledWith(true));
+      assert(component.markers()[1].setVisible.calledWith(false));
+      assert(component.markers()[2].setVisible.calledWith(false));
+      assert(component.markers()[3].setVisible.calledWith(false));
+      assert(component.markers()[4].setVisible.calledWith(false));
+    });
   });
 });
