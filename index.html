@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Neighborhood Map</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 </head>
-<body style="display: flex; flex-direction: row">
-  <div id="list-view" style="width: 20%">
-    <p>
+
+<body>
+  <div id="list-view">
+    <p class="title">
       <strong>Thought</strong>Works offices...
     </p>
-    <input data-bind="textInput: searcher" />
 
-    <ul data-bind="foreach: filteredLocations">
+    <input class="search-box" data-bind="textInput: searcher" />
+
+    <ul class="office-list" data-bind="foreach: filteredLocations">
       <li data-bind="click: $root.locationSelected">
         <span data-bind="text: location"></span>
       </li>
     </ul>
   </div>
-  <div id="map" style="width: 80%"></div>
+  <div id="map"></div>
 </body>
 </html>
