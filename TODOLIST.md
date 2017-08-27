@@ -73,9 +73,9 @@
     * [ ] phone 
 * apis
   * [x] Google Map Api
-  * [ ] at least one another third-party apis when a map marker or list view entry is clicked
-  * [ ] provide attribution(source indication) for the source of additional data in your UI and in your `README`
-  * [ ] all api data requests should be async 
+  * [x] at least one another third-party apis when a map marker or list view entry is clicked - Unsplash
+  * [x] provide attribution(source indication) for the source of additional data in your UI and in your `README`
+  * [ ] all api data requests should be async - should I use service worker?  
 * error handling 
   * [ ] api errors should not affect ui: http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/
   * [ ] should handle API failure using callback techniques
@@ -106,6 +106,7 @@
 * [ ] README
   * [ ] how to start the project
   * [ ] what third-party apis are used
+  * [ ] attributions to third party API  
   * [ ] project efforts and takeouts
 
 ---
