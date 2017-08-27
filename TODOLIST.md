@@ -57,11 +57,11 @@
       * [x] clicking animation
     * [ ] list functionality is responsive and runs error free(duplicated?)
   * [ ] Filter Locations 
-    * [x] includes a text input or dropdown menu 
+    * [x] includes a text input or drop-down menu 
     * [x] should be able to filter the **map markers** and **list items** to locations matching the text input or selection
       * [x] real-time filter 
       * [ ] fuzzy match?(enhancer) 
-    * [ ] filter function runs error-free
+    * [x] filter function runs error-free
   * [ ] app's UI should be intuitive to use
 * responsiveness
   * [ ] all application components render on-screen in a responsiveness manner
