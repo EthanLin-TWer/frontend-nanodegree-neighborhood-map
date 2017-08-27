@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Neighborhood Map</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/7b81c4e16f.css">
 </head>
 
 <body>
@@ -12,7 +13,10 @@
       <strong>Thought</strong>Works
     </p>
 
-    <input class="search-box" data-bind="textInput: searcher" />
+    <div class="input-group">
+      <span><i class="fa fa-search" aria-hidden="true"></i></span>
+      <input class="search-box" data-bind="textInput: searcher" />
+    </div>
 
     <ul class="office-list list-group" data-bind="foreach: filteredLocations">
       <li class="list-group-item list-group-item-primary"

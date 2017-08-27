@@ -21,9 +21,13 @@ body
   margin-top: 1rem
   font-size: 29px
 
+.input-group
+  margin: 0 0.35rem
+
 .search-box
   display: block
   margin: 0 auto
+  width: 80%
 
 .office-list
   margin-top: 10px
@@ -34,6 +38,7 @@ body
   padding: 0.5rem 1rem
   font-size: 15px;
 
-.list-group-item:first-child
-  border-top-right-radius: 0
-  border-top-left-radius: 0
+.list-group-item
+  &:first-child, &:last-child
+    border-top-right-radius: 0
+    border-top-left-radius: 0
