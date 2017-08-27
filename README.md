@@ -2,7 +2,7 @@
 
 ## Getting started
 
-Simply visit http://blog.linesh.tw/frontend-nanodegree-neighborhood-map/dist/ and play around! 
+Simply visit http://blog.linesh.tw/frontend-nanodegree-neighborhood-map/dist/index.html and play around! 
 
 If you are interested in how the code works, you can checkout the code and run the following commands to have a local server up and running for you to play with: 
 
