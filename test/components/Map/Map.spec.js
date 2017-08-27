@@ -80,5 +80,24 @@ describe('Map component', () => {
       assert(component.markers()[3].setVisible.calledWith(false));
       assert(component.markers()[4].setVisible.calledWith(false));
     });
+
+    it('should update all marker to invisible when passed in locations match no places', () => {
+      const locations = [
+        { location: 'some',  lat: 10, lng: 2 },
+        { location: 'where', lat: 20, lng: 2 },
+        { location: 'else',  lat: 30, lng: 2 },
+        { location: 'in',    lat: 40, lng: 2 },
+        { location: 'the',   lat: 50, lng: 2 },
+        { location: 'world', lat: 60, lng: 2 },
+      ];
+
+      component.updateVisibleMarkers(locations);
+
+      assert(component.markers()[0].setVisible.calledWith(false));
+      assert(component.markers()[1].setVisible.calledWith(false));
+      assert(component.markers()[2].setVisible.calledWith(false));
+      assert(component.markers()[3].setVisible.calledWith(false));
+      assert(component.markers()[4].setVisible.calledWith(false));
+    });
   });
 });
