@@ -35,6 +35,12 @@
 * [x] coverage: istanbul
 * [ ] project structure 
 
+## Feedback 
+
+* [ ] load Google Maps asynchronously
+* [ ] can only be one activated marker in a time
+* [ ] responsiveness on mobile  
+
 
 ## submit requirements 
 
