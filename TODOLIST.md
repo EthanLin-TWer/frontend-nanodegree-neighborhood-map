@@ -38,9 +38,19 @@
 ## Feedback 
 
 * [ ] load Google Maps asynchronously
+  * https://www.npmjs.com/package/google-maps-api-loader
+  * https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282
+  * https://developers.google.com/maps/documentation/javascript/examples/map-simple
+* [ ] error handling on Google Map loading
+  * https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror#element.onerror
 * [ ] can only be one activated marker in a time
+  * https://developers.google.com/maps/documentation/javascript/examples/marker-animations-iteration
 * [ ] responsiveness on mobile  
-
+  * https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag
+  * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
+* [ ] suggestion: center marker on selected
+  * `panTo`: https://developers.google.com/maps/documentation/javascript/examples/event-simple 
+* [ ] suggestion: use only one info-window 
 
 ## submit requirements 
 
