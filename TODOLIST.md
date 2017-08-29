@@ -51,6 +51,7 @@
 * [ ] suggestion: center marker on selected
   * `panTo`: https://developers.google.com/maps/documentation/javascript/examples/event-simple 
 * [ ] suggestion: use only one info-window 
+* [ ] cross domain issue on http://blog.linesh.tw/frontend-nanodegree-neighborhood-map/dist/index.html 
 
 ## submit requirements 
 
