@@ -15,6 +15,7 @@ const loadGoogleMapsAPI = (callback) => {
 
   script.type = 'text/javascript';
   script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=${callback}`;
+  script.defer = true;
 
   document.body.appendChild(script);
 };
