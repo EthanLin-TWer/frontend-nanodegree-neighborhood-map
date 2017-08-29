@@ -33,7 +33,7 @@
 * [x] styles support - stylus 
   * https://code.tutsplus.com/tutorials/sass-vs-less-vs-stylus-preprocessor-shootout--net-24320
 * [x] coverage: istanbul
-* [ ] project structure 
+* [x] project structure 
 
 ## Feedback 
 
