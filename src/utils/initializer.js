@@ -2,25 +2,26 @@ import Map from '../components/Map';
 import UnsplashService from './unsplashService';
 import defaultLocations from './locations';
 
+const googleMapFailedLoadingHandler = () => {
+  const container = document.getElementById('error-message-container');
+  container.classList.toggle('off-by-default');
+};
+
 export default function initGoogleMap() {
   window.addEventListener('DOMContentLoaded', () => {
     const callback = registerCallback();
-    loadGoogleMapsAPI(callback);
+    loadGoogleMapsAPI(callback, googleMapFailedLoadingHandler);
   });
 }
 
-const googleMapFailedLoadingHandler = () => {
-
-};
-
 const key = 'AIzaSyBJa7HRNHLV9Ir8MS6afvn9yVfIzpBp2po';
-const loadGoogleMapsAPI = (callback) => {
+const loadGoogleMapsAPI = (callback, failureCallback) => {
   const script = document.createElement('script');
 
   script.type = 'text/javascript';
   script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=${callback}`;
   script.defer = true;
-  script.onerror = 'googleMapFailedLoadingHandler()';
+  script.onerror = failureCallback;
 
   document.body.appendChild(script);
 };
