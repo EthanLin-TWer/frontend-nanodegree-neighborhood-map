@@ -82,8 +82,6 @@ class Map {
           });
       });
 
-      sharedInfoWindow.addListener('closeclick', () => google.maps.event.trigger(marker, 'click'));
-
       return marker;
     });
   }
