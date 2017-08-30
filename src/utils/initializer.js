@@ -8,7 +8,7 @@ const googleMapFailedLoadingHandler = () => {
 };
 
 export default function initGoogleMap() {
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
     const callback = registerCallback();
     loadGoogleMapsAPI(callback, googleMapFailedLoadingHandler);
   });

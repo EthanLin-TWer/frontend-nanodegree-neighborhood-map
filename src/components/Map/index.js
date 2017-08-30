@@ -34,22 +34,23 @@ class Map {
   }
 
   initMarkers() {
+    const sharedInfoWindow = this.initInfoWindow();
+
     return this.locations.map(location => {
       const place = location.location;
       const marker = this.initMarker(location, this.map);
-      const infoWindow = this.initInfoWindow(place);
 
       marker.addListener('click', () => {
         if (marker.getAnimation()) {
           marker.setAnimation(null);
-          infoWindow.close();
+          sharedInfoWindow.close();
 
           return ;
         }
 
         marker.setAnimation(google.maps.Animation.BOUNCE);
-        infoWindow.setContent('Loading city photos from Unsplash...');
-        infoWindow.open(this.map, marker);
+        sharedInfoWindow.setContent('Loading city photos from Unsplash...');
+        sharedInfoWindow.open(this.map, marker);
 
         this.unsplashService.searchPhotos(place)
           .then(data => {
@@ -61,7 +62,7 @@ class Map {
             const attribution = links.html;
             const utmParameter = 'utm_source=udacity-neighborhood-map&utm_medium=referral&utm_campaign=api-credit';
 
-            infoWindow.setContent(`
+            sharedInfoWindow.setContent(`
               <div style="width: 400px; height: 470px;">
                 <p><strong>${place}</strong></p>
                 
@@ -73,11 +74,11 @@ class Map {
             `);
           })
           .catch(() => {
-            infoWindow.setContent('Retrieving photos failed. Please click the marker again to retry.');
+            sharedInfoWindow.setContent('Retrieving photos failed. Please click the marker again to retry.');
           });
       });
 
-      infoWindow.addListener('closeclick', () => google.maps.event.trigger(marker, 'click'));
+      sharedInfoWindow.addListener('closeclick', () => google.maps.event.trigger(marker, 'click'));
 
       return marker;
     });
@@ -91,7 +92,7 @@ class Map {
     });
   }
 
-  initInfoWindow(content) {
+  initInfoWindow(content = '') {
     return new google.maps.InfoWindow({ content });
   }
 }
