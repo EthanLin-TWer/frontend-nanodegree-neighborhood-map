@@ -3,11 +3,15 @@ import UnsplashService from './unsplashService';
 import defaultLocations from './locations';
 
 export default function initGoogleMap() {
-  window.addEventListener('load', () => {
+  window.addEventListener('DOMContentLoaded', () => {
     const callback = registerCallback();
     loadGoogleMapsAPI(callback);
   });
 }
+
+const googleMapFailedLoadingHandler = () => {
+
+};
 
 const key = 'AIzaSyBJa7HRNHLV9Ir8MS6afvn9yVfIzpBp2po';
 const loadGoogleMapsAPI = (callback) => {
@@ -16,6 +20,7 @@ const loadGoogleMapsAPI = (callback) => {
   script.type = 'text/javascript';
   script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&callback=${callback}`;
   script.defer = true;
+  script.onerror = 'googleMapFailedLoadingHandler()';
 
   document.body.appendChild(script);
 };
