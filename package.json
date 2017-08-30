@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "eslint src test",
     "test": "nyc mocha --require babel-register test/**/*.spec.js",
+    "build": "webpack",
     "start": "webpack-dev-server --inline --content-base dist"
   },
   "author": "Linesh",
