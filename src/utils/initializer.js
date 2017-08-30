@@ -13,7 +13,7 @@ const googleMapFailedLoadingHandler = () => {
 };
 
 const key = 'AIzaSyBJa7HRNHLV9Ir8MS6afvn9yVfIzpBp2po';
-export default function initGoogleMap() {
+export default function loadGoogleMapAPI() {
   GoogleMapsAPILoader({
     libraries: ['places'],
     apiKey: key
