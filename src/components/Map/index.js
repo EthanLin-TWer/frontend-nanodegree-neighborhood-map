@@ -49,6 +49,10 @@ class Map {
         }
 
         marker.setAnimation(google.maps.Animation.BOUNCE);
+        window.setTimeout(() => {
+          marker.setAnimation(null);
+        }, 3 * 700);
+
         sharedInfoWindow.setContent('Loading city photos from Unsplash...');
         sharedInfoWindow.open(this.map, marker);
 
