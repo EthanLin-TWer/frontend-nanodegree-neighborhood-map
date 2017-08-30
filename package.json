@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "google-maps-api-loader": "^0.3.0",
     "knockout": "^3.4.2",
     "unsplash-js": "^4.6.0"
   }
