@@ -37,12 +37,10 @@
 
 ## Feedback 
 
-* [ ] load Google Maps asynchronously
+* [x] [load Google Maps asynchronously][load-google-maps-async]
+* [x] error handling on Google Map loading - [onerror][]
+* [ ] better Google Maps loading 
   * https://www.npmjs.com/package/google-maps-api-loader
-  * https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282
-  * https://developers.google.com/maps/documentation/javascript/examples/map-simple
-* [ ] error handling on Google Map loading
-  * https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror#element.onerror
 * [ ] can only be one activated marker in a time
   * https://developers.google.com/maps/documentation/javascript/examples/marker-animations-iteration
 * [ ] responsiveness on mobile  
@@ -52,6 +50,9 @@
   * `panTo`: https://developers.google.com/maps/documentation/javascript/examples/event-simple 
 * [ ] suggestion: use only one info-window 
 * [ ] cross domain issue on http://blog.linesh.tw/frontend-nanodegree-neighborhood-map/dist/index.html 
+
+[load-google-maps-async]: https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282
+[onerror]: https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror#element.onerror
 
 ## submit requirements 
 
