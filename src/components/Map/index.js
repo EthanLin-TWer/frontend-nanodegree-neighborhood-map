@@ -48,6 +48,8 @@ class Map {
           return ;
         }
 
+        this.map.setZoom(5);
+        this.map.setCenter(marker.getPosition());
         marker.setAnimation(google.maps.Animation.BOUNCE);
         window.setTimeout(() => {
           marker.setAnimation(null);
