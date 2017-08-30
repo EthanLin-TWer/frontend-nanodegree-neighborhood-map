@@ -60,14 +60,10 @@ Review / Feedback 1
 Review / Feedback 2 
 ---
 
-* [ ] responsiveness on mobile 2: style customization
-  * [ ] 汉堡菜单：http://discussions.youdaxue.com/t/google/44499/2
-* [ ] refactor
-  * [ ] GoogleMapAPILoader Promise to async try / catch
-  * [ ] LHS scroll views should stick to the page 
-* [ ] suggestion: semantic HTML5: 
-  * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
+* [x] responsiveness on mobile 2: style customization
+* [x] [semantic HTML5][semantic-html5]
 
+[semantic-html5]: https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
 
 submit requirements 
 ---
@@ -132,7 +128,11 @@ submit requirements
   * [ ] unique functionality beyond the minimum requirements 
   * [ ] different color sets
   * [ ] pure-shortcuts
-  * [ ] more api sources 
+  * [ ] more api sources
+  * [ ] refactor
+    * [ ] GoogleMapAPILoader Promise to async try / catch
+    * [ ] LHS scroll views should stick to the page 
+    * [ ] a lot to refactor 
   * [ ] performance optimization - build-performance-in
     * [ ] 90+ in PageSpeed
     * [ ] 60fps
