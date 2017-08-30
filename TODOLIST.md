@@ -43,12 +43,12 @@
 * [x] can only be one activated marker in a [limited period][marker-bouncing-timeout]
 * [x] [better Google Maps loading][google-maps-api-loader] 
 * [x] [center marker on selected][pan-to]
+* [x] cross domain issue on Github Pages: rate limit increased to 5k/hour 
 * [ ] responsiveness on mobile  
   * [x] [Viewport Meta tag][viewport-meta-tag]
   * [ ] style customization
 * [ ] suggestion: semantic HTML5: 
   * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
-* [ ] cross domain issue on http://blog.linesh.tw/frontend-nanodegree-neighborhood-map/dist/index.html 
 
 [load-google-maps-async]: https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282
 [onerror]: https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror#element.onerror
