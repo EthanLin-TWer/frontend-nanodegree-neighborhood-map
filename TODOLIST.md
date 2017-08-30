@@ -43,7 +43,7 @@
 * [x] can only be one activated marker in a [limited period][marker-bouncing-timeout]
 * [ ] responsiveness on mobile  
   * https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag
-* [ ] semantic HTML5: 
+* [ ] suggestion: semantic HTML5: 
   * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
 * [ ] better Google Maps loading 
   * https://www.npmjs.com/package/google-maps-api-loader

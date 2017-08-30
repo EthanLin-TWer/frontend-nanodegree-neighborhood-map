@@ -4,7 +4,10 @@ import defaultLocations from './locations';
 
 const googleMapFailedLoadingHandler = () => {
   const container = document.getElementById('error-message-container');
+  const errorMessage = document.getElementById('error-message');
+
   container.classList.toggle('off-by-default');
+  errorMessage.innerHTML = 'Google Map failed to load. Please refresh to try again.';
 };
 
 export default function initGoogleMap() {
