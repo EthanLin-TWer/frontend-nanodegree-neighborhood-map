@@ -1,6 +1,7 @@
 # TODOLIST
 
-## infrastructure
+infrastructure
+---
 
 * [x] git
   * `git init`
@@ -35,7 +36,9 @@
 * [x] coverage: istanbul
 * [x] project structure 
 
-## Feedback 
+
+Review / Feedback 1
+---
 
 * [x] [load Google Maps asynchronously][load-google-maps-async]
 * [x] error handling on Google Map loading - [onerror][]
@@ -44,11 +47,7 @@
 * [x] [better Google Maps loading][google-maps-api-loader] 
 * [x] [center marker on selected][pan-to]
 * [x] cross domain issue on Github Pages: rate limit increased to 5k/hour 
-* [ ] responsiveness on mobile  
-  * [x] [Viewport Meta tag][viewport-meta-tag]
-  * [ ] style customization
-* [ ] suggestion: semantic HTML5: 
-  * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
+* [x] responsiveness on mobile 1: [Viewport Meta tag][viewport-meta-tag]
 
 [load-google-maps-async]: https://discussions.udacity.com/t/handling-google-maps-in-async-and-fallback/34282
 [onerror]: https://developer.mozilla.org/en/docs/Web/API/GlobalEventHandlers/onerror#element.onerror
@@ -57,7 +56,19 @@
 [viewport-meta-tag]: https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag
 [pan-to]: https://developers.google.com/maps/documentation/javascript/examples/event-simple
 
-## submit requirements 
+
+Review / Feedback 2 
+---
+
+* [ ] responsiveness on mobile 2: style customization
+* [ ] refactor
+  * [ ] GoogleMapAPILoader Promise to async try / catch
+* [ ] suggestion: semantic HTML5: 
+  * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
+
+
+submit requirements 
+---
 
 * [ ] Core functions 
   * [x] Maps and Markers
@@ -86,26 +97,26 @@
   * [x] app's UI should be intuitive to use
 * responsiveness
   * [ ] all application components render on-screen in a responsiveness manner
-    * [ ] desktop
+    * [x] desktop
     * [ ] phone 
   * [ ] all application components are usable across modern desktop, tablet, and phone browsers
-    * [ ] desktop
+    * [x] desktop
     * [ ] tablet
     * [ ] phone 
-* apis
+* [x] apis
   * [x] Google Map Api
   * [x] at least one another third-party apis when a map marker or list view entry is clicked - Unsplash
   * [x] provide attribution(source indication) for the source of additional data in your UI and in your `README`
-  * [ ] all api data requests should be async - should I use service worker?  
-* error handling 
-  * [ ] api errors should not affect ui: http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/
-  * [ ] should handle API failure using callback techniques
-    * [ ] Google Map API
+  * [x] all api data requests should be async - `<script async></script>`  
+* [x] error handling 
+  * [x] api errors should not affect ui: http://ruben.verborgh.org/blog/2012/12/31/asynchronous-error-handling-in-javascript/
+  * [x] should handle API failure using callback techniques
+    * [x] Google Map API
     * [x] Unsplash API failure
-  * [ ] user should not be left wondering why a component is not working, there should be some visible indication on the page with clear error message
-    * [ ] Google Map API
+  * [x] user should not be left wondering why a component is not working, there should be some visible indication on the page with clear error message
+    * [x] Google Map API
     * [x] Unsplash API failure
-  * [ ] application should run without error
+  * [x] application should run without error
 * [x] Implementation Constraint
   * [x] KnockoutJS must be used
   * [x] Knockout should be mv*-patternly used
@@ -126,14 +137,13 @@
     * optimization list: https://github.com/linesh-simplicity/frontend-nanodegree-mobile-portfolio/blob/master/Gruntfile.js#L247-L250
     * https://github.com/google/web-starter-kit
     * https://webpack.github.io/docs/list-of-plugins.html
-  * [ ] checkstyle - build-styles-in
-    * [ ] code formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide][]
+  * [x] checkstyle / build-quality-in: code formatted with consistent, logical, and easy-to-read formatting as described in the [Udacity JavaScript Style Guide][]
   * [ ] tests and 90% + coverage - build-styles-in
   * [ ] everything that you will acquire from a paid product - ui, experience, simple, shortcuts...
 * [ ] README
-  * [ ] how to start the project
-  * [ ] what third-party apis are used
-  * [ ] attributions to third party API  
+  * [x] how to start the project
+  * [x] what third-party apis are used
+  * [x] attributions to third party API  
   * [ ] project efforts and takeouts
 
 ---
