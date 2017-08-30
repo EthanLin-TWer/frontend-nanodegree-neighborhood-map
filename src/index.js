@@ -9,5 +9,5 @@ import './index.styl';
 window.addEventListener('load', loadGoogleMapAPI);
 
 ko.applyBindings(
-  new ListView(defaultLocations), document.getElementById('list-view')
+  new ListView(defaultLocations), document.getElementById('navigation-controller')
 );

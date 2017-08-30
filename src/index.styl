@@ -10,18 +10,40 @@ body
   display: flex
   flex-direction: row
 
-#list-view
-  width: 20%
+@media (min-width: 414px)
+  #list-view
+    width: 20%
 
-#map
-  width: 80%
+  #map
+    width: 80%
+
+  #hamburger-view
+    display: none
+
+  .search
+    padding: 0 20px
 
 @media (max-width: 414px)
   #list-view
-    display: none;
+    display: none
+
+  #hamburger-view
+    display: block
+    position: fixed
+    top: 0
+    width: 100%
+    height: 50px
+    padding: 0 20px
+    z-index: 10
 
   #map
+    margin-top: 50px
     width: 100%
+
+  .office-list
+    height: 270px
+    margin-top: 0
+    overflow: scroll
 
 #error-message-container
   height: 100%
@@ -41,12 +63,13 @@ body
   font-size: 29px
 
 .input-group
-  margin: 0 0.35rem
+  padding-top: 4px
 
 .search-box
   display: block
-  margin: 0 auto
-  width: 80%
+  margin: 0 5px
+  width: 90%
+  border: 1px solid #ccc
 
 .office-list
   margin-top: 10px

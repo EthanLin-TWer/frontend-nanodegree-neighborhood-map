@@ -5,6 +5,8 @@ export default class ListView {
     this.locations = locations;
     this.selectedLocation = ko.observable({});
 
+    this.searching = ko.observable(false);
+
     this.searcher = ko.observable('');
     this.filteredLocations = ko.computed(() => {
       if (!this.searcher()) {
@@ -24,6 +26,7 @@ export default class ListView {
     });
 
     this.locationSelected = this.locationSelected.bind(this);
+    this.expandOptions = this.expandOptions.bind(this);
   }
 
   updateVisibleMarkers(locations) {
@@ -31,6 +34,11 @@ export default class ListView {
     if (!window.mapClass) return ;
 
     window.mapClass.updateVisibleMarkers(locations);
+  }
+
+  expandOptions() {
+    const collapse = !this.searching();
+    this.searching(collapse);
   }
 
   locationSelected(location) {

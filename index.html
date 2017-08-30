@@ -6,22 +6,40 @@
 
   <title>Neighborhood Map</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" media="none" onload="media='all'">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"
+        media="none" onload="media='all'">
   <link rel="stylesheet" href="https://use.fontawesome.com/7b81c4e16f.css" media="none" onload="media='all'">
 </head>
 
-<body>
+<body id="navigation-controller">
   <div id="list-view">
     <p class="title">
       <strong>Thought</strong>Works
     </p>
 
-    <div class="input-group">
+    <div class="input-group search">
       <span><i class="fa fa-search" aria-hidden="true"></i></span>
-      <input class="search-box" data-bind="textInput: searcher" />
+      <input class="search-box" data-bind="textInput: searcher"/>
     </div>
 
     <ul class="office-list list-group" data-bind="foreach: filteredLocations">
+      <li class="list-group-item list-group-item-primary"
+          data-bind="click: $root.locationSelected,
+                     css: { active: $data.location === $root.selectedLocation().location }">
+        <span data-bind="text: location"></span>
+      </li>
+    </ul>
+
+  </div>
+
+  <div id="hamburger-view">
+    <div class="input-group">
+      <span><i class="fa fa-search" aria-hidden="true"></i></span>
+      <input class="search-box" data-bind="textInput: searcher, click: expandOptions"/>
+    </div>
+
+    <ul class="office-list list-group" data-bind="foreach: filteredLocations, visible: searching">
       <li class="list-group-item list-group-item-primary"
           data-bind="click: $root.locationSelected,
                      css: { active: $data.location === $root.selectedLocation().location }">
@@ -36,6 +54,5 @@
       <span id="error-message"></span>
     </div>
   </div>
-
 </body>
 </html>
