@@ -63,6 +63,7 @@ Review / Feedback 2
 * [ ] responsiveness on mobile 2: style customization
 * [ ] refactor
   * [ ] GoogleMapAPILoader Promise to async try / catch
+  * [ ] LHS scroll views should stick to the page 
 * [ ] suggestion: semantic HTML5: 
   * https://stackoverflow.com/questions/17272019/why-to-use-html5-semantic-tag-instead-of-div
 
