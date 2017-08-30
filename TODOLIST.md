@@ -61,6 +61,7 @@ Review / Feedback 2
 ---
 
 * [ ] responsiveness on mobile 2: style customization
+  * [ ] 汉堡菜单：http://discussions.youdaxue.com/t/google/44499/2
 * [ ] refactor
   * [ ] GoogleMapAPILoader Promise to async try / catch
   * [ ] LHS scroll views should stick to the page 
